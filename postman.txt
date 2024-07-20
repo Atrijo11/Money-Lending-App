@@ -1,0 +1,84 @@
+In Postman,
+Do the following the individual segments.
+
+1. for Approve Application During Signup:-
+Open Postman and create a new POST request.
+Set the URL to http://localhost:5000/api/signup.
+In the Body tab, select raw and JSON format.
+Enter the following JSON object:
+
+{
+    "phoneNumber": "1234567890",
+    "email": "test@example.com",
+    "name": "John Doe",
+    "dob": "2000-01-01",
+    "monthlySalary": 30000
+}
+
+===============================================================================================================================================
+
+2. for Login API
+in Postman
+Open Postman and create a new POST request.
+Set the URL to http://localhost:5000/api/login.
+In the Body tab, select raw and JSON format.
+Enter the following JSON object:
+
+{
+    "email": "test@example.com",
+    "password": "your_password"
+}
+
+===============================================================================================================================================
+
+3. for Show User Data
+In Postman:-
+
+First,
+Create a new POST request in Postman.
+Set the URL to http://localhost:5000/api/login.
+In the Body tab, select raw and JSON format.
+Enter the login credentials JSON object:
+
+{
+    "email": "test@example.com",
+    "password": "your_password"
+}
+
+
+Now, 
+to fetch the data
+Create a new GET request in Postman.
+Set the URL to http://localhost:5000/api/user.
+Go to the Headers tab and add a new header:
+Key: Authorization
+Value: Bearer <your_jwt_token> (replace <your_jwt_token> with the token you copied).
+Send the request and you should receive the user data including the Purchase Power amount.
+
+===============================================================================================================================================
+
+4. for Borrow Money API:
+to check for JWT token:
+Create a new POST request in Postman.
+Set the URL to http://localhost:5000/api/login.
+In the Body tab, select raw and JSON format.
+Enter the login credentials JSON object:
+{
+    "email": "test@example.com",
+    "password": "your_password"
+}
+Send the request and copy the received JWT token from the response.
+
+Now,
+For Borrow money:
+Create a new POST request in Postman.
+Set the URL to http://localhost:5000/api/borrow.
+Go to the Headers tab and add a new header:
+Key: Authorization
+Value: Bearer <your_jwt_token> (replace <your_jwt_token> with the token you copied).
+In the Body tab, select raw and JSON format.
+Enter the borrow request JSON object:
+{
+    "amount": 5000,
+    "tenure": 12 // 12 months
+}
