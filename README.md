@@ -2,6 +2,8 @@
 A Money Lending App that approves application during signup, runs a Login API, shows User data and runs an API to borrow Money
 
 This app has 4 segments which each require some components express or mongo or JWt to be imported for it to be setup:
+(click on the readme file and click on the code segment)
+
 1. **Approve Application During Signup**
 npm init -y
 npm install express mongoose body-parser
